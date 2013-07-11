@@ -16,7 +16,7 @@ app.configure('development',function(){
   app.use(express.logger('dev'));
 });
  
-app.configure(function(){
+app.configure(function(){ 
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser('keyboard cat'));
