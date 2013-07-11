@@ -1,0 +1,12 @@
+machine:
+  timezone:
+    America/Los_Angeles
+  node:
+    version: 0.8.2
+
+test:
+  pre:
+    - apt-get install node-vows
+    - nohup bash -c "node index.js &"
+  override:
+    - vows tests.js --local
